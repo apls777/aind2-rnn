@@ -34,9 +34,8 @@ def build_part1_RNN(window_size):
 
 
 def cleaned_text(text):
-    punctuation = ['!', ',', '\.', ':', ';', '?', '\'', '-']
-    text = re.sub('[^0-9a-z%s]+' % ''.join(punctuation), ' ', text)
-    text = text.replace('--', ' ')
+    punctuation = ['!', ',', '\.', ':', ';', '?']
+    text = re.sub('[^a-z%s]+' % ''.join(punctuation), ' ', text)
 
     return text
 
